@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
-<body>
+	<head>
+		<link rel="stylesheet" href="/v1.0.0/style-test.css">
+	</head>
 
-<video  width=”320″ height=”240″>
-	<source type=”video/mp4″ src=”/my_video_file.mp4″ >
-	<track src=”/captions_file.vtt” label=”English” kind=”captions” srclang=”en-us” default >
-	<track src=”/French_captions_file.vtt” label=”French” kind=”subtitles” srclang=”fr”>
-</video>
+	<body>
 
-</body>
+		<video  width=”320″ height=”240″>
+			<!-- <source type=”video/mp4″ src=”/my_video_file.mp4″ >
+			<track src=”/captions_file.vtt” label=”English” kind=”captions” srclang=”en-us” default >
+			<track src=”/French_captions_file.vtt” label=”French” kind=”subtitles” srclang=”fr”> -->
+
+			<div id="video-controls" class="controls" data-state="hidden">
+				<button id="playpause" type="button" data-state="play">Play/Pause</button>
+				<button id="stop" type="button" data-state="stop">Stop</button>
+				<div class="progress">
+				<progress id="progress" value="0" min="0">
+					<span id="progress-bar"></span>
+				</progress>
+				</div>
+				<button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+				<button id="volinc" type="button" data-state="volup">Vol+</button>
+				<button id="voldec" type="button" data-state="voldown">Vol-</button>
+				<button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
+				<button id="subtitles" type="button" data-state="subtitles">CC</button>
+			</div>
+		</video>
+
+	</body>
 </html>
